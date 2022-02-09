@@ -1,0 +1,13 @@
+beautifulsoup4 
+Flask==1.1.2
+networkx 
+nltk 
+numpy 
+pandas 
+regex 
+requests  
+scipy 
+sklearn==0.0
+sumy==0.9.0
+pytest
+pylint
