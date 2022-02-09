@@ -18,7 +18,7 @@ LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
 
 @app.route("/get_wiki_summary_methoda/<subject>")
-def get_wiki_summary(subject):
+def get_wiki_summary_a(subject):
     text = getabstract(subject)
     stemmer = Stemmer('english') #Stemmer
     Tsummarizer=TextRankSummarizer(stemmer)#Initializing the TextRank Summarizer Object with stemmer
@@ -32,7 +32,7 @@ def get_wiki_summary(subject):
     return re.sub(r'\[\]','', final_answer)
   
 @app.route("/get_wiki_summary_methodb/<subject>")
-def get_wiki_summary(subject):
+def get_wiki_summary_b(subject):
     text = getabstract(subject)
     stemmer = Stemmer('english') #Stemmer
     Lsummarizer=LexRankSummarizer(stemmer)#Initializing the TextRank Summarizer Object with stemmer
@@ -51,4 +51,4 @@ def home():
     return html.format(format)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
