@@ -3,6 +3,7 @@ import requests
 import regex as re
 from bs4 import BeautifulSoup
 from sumy.summarizers.text_rank import TextRankSummarizer
+from sumy.summarizers.lex_rank import LexRankSummarizer
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.nlp.stemmers import Stemmer
