@@ -1,4 +1,4 @@
-from app import getabstract
+from app import get_wiki_summary_a
 import requests
 import regex as re
 from bs4 import BeautifulSoup
