@@ -18,6 +18,33 @@ app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
 
+
+def getabstract(subject):
+    """parameter"""
+ 
+    url = 'https://en.wikipedia.org/w/api.php'
+    params = {
+            'action': 'parse',
+            'page': subject,
+            'format': 'json',
+            'prop':'text',
+            'redirects':''
+            }
+ 
+    response = requests.get(url, params=params)
+    data = response.json()
+ 
+    raw_html = data['parse']['text']['*']
+    soup = BeautifulSoup(raw_html,'html.parser')
+    soup.find_all('p')
+    text = ''
+ 
+    for p in soup.find_all('p'):
+        text += p.text
+    
+    return text  
+
+
 @app.route("/get_wiki_summary_methoda/<subject>")
 def get_wiki_summary_a(subject):
     text = getabstract(subject)
