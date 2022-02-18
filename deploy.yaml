@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-demo
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: example
+          image: 485102483348.dkr.ecr.us-east-1.amazonaws.com/kubernetes-microservice:latest
+          ports:
+            - containerPort: 8080
