@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: example-project
-        image: aimh/class-example
+        image: aimh/dockerdemo
         ports:
             - containerPort: 8080
 ---
