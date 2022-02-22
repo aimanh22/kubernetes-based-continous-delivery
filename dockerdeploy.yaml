@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: example-project
-        image: containerapp
+        image: app-container
 ---
 apiVersion: v1
 kind: Service
