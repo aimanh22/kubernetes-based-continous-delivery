@@ -5,7 +5,13 @@ metadata:
   namespace: default
 spec:
   replicas: 1
+    selector:
+    matchLabels:
+      dockerdeploy: web
   template:
+    metadata:
+      labels:
+        dockerdeploy: web
     spec:
       containers:
       - name: example-project
