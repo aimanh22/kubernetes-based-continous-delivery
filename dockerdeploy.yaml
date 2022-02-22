@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      bb: web
+      app: web
   template:
     metadata:
       labels:
-        bb: web
+        app: web
     spec:
       containers:
       - name: example-project
@@ -25,7 +25,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    bb: web
+    app: web
   ports:
   - port: 3000
     targetPort: 3000
