@@ -3,7 +3,7 @@
 Steps
 1. Clone the repo
 2. Run the following commands in CMD to install all the requirements, test and run the app.
-  a. Make all 
+  a. Make all <br>
   b. python app.py
 3. Run the following commands in CMD to create its Docker imagev to an ECR registry
   a.docker build -t container-app .
