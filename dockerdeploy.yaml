@@ -36,7 +36,7 @@ metadata:
   name: example-entrypoint
   namespace: default
 spec:
-  type:ClusterIP
+  type: ClusterIP
   selector:
     app: app
   ports:
