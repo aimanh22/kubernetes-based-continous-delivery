@@ -36,9 +36,10 @@ metadata:
   name: example-entrypoint
   namespace: default
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: app
   ports:
-  - port: 80
+  - protocol: TCP
+    port: 80
     targetPort: 8080
